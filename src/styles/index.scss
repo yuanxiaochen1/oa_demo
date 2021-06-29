@@ -1,0 +1,146 @@
+@import './variables.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './element-ui.scss';
+@import './sidebar.scss';
+
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+.el-tooltip__popper {
+  font-size: 14px;
+  max-width: 50%;
+}
+//修改滚动条样式
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  /**/
+}
+::-webkit-scrollbar-track {
+  background: rgb(239, 239, 239);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb {
+  background: #bfbfbf;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+::-webkit-scrollbar-corner {
+  background: #179a16;
+}
+.el-select__tags-text {
+  display: inline-block;
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.el-select .el-tag__close.el-icon-close {
+  top: -6px;
+}
+.el-dialog__body{
+  max-height: 75vh;
+  overflow: auto;
+  scrollbar-width: none;
+}
+.el-dialog__body::-webkit-scrollbar{
+  display: none;
+}
+// 将el-table的展开图标替换为其他图标
+.el-table__expand-icon{
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+
+
+.el-table__expand-icon 
+.el-icon-arrow-right:before{
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e62c";
+}
+
+.el-table__expand-icon--expanded
+.el-icon-arrow-right:before{
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e62d";
+}
+
+.noData{
+  text-align: center;
+  margin-top: 100px;
+  color: #777;
+  font-size: 14px;
+}
+//修改表格表头的统一样式
+.el-table th{
+  background-color: #94c8fd!important;
+  color: #fff;
+  padding:7px 0!important;
+}
+label {
+  font-weight: 100;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+// main-container global css
+.app-container {
+  padding: 20px;
+}
